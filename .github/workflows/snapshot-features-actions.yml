@@ -14,7 +14,7 @@ jobs:
         run: sudo apt-get install -y jq
 
       - name: Extract metadata (tags) for Docker
-        run: echo 'IMAGE_TAG=$(cat example-app/composer.json | jq .version -r)-SNAPSHOT-$GITHUB_RUN_ID' >> $GITHUB_ENV
+        run: echo 'IMAGE_TAG=$(cat example-app/composer.json | jq .version -r)' >> $GITHUB_ENV
       - name: Building Docker Image using Dockerfile
         run: docker build -t noroyaru/bootcamp:${{ env.IMAGE_TAG }} .
 
