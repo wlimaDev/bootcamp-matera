@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - 'main'
-
-
 jobs:
   Build-Dockerfile:
     runs-on: ubuntu-latest
@@ -17,7 +15,6 @@ jobs:
 
       - name: Extract metadata (tags) for Docker
         run: echo 'IMAGE_TAG=$(cat example-app/composer.json | jq .version -r)-SNAPSHOT-$GITHUB_RUN_ID' >> $GITHUB_ENV
-
       - name: Building Docker Image using Dockerfile
         run: docker build -t noroyaru/bootcamp:${{ env.IMAGE_TAG }} .
 
