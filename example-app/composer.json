@@ -1,6 +1,6 @@
 {
     "name": "matera/bootcamp",
-    "version": "7.0.0",
+    "version": "7.1.1",
     "type": "project",
     "description": "Projeto WEB para o curso de DevOps",
     "keywords": ["framework", "laravel"],
