@@ -2,7 +2,7 @@ name: Generate Snapshot Feature
 on:
   push:
     branches:
-      - 'main'
+      - 'features/**'
 jobs:
   Build-Dockerfile:
     runs-on: ubuntu-latest
