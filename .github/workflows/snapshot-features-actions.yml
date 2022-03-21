@@ -26,3 +26,4 @@ jobs:
         
       - name: Send image to Docker Hub
         run: docker push noroyaru/bootcamp:${{ env.IMAGE_TAG }}
+        #testando se vai funcionar o envio do pipeline pela branch errada
